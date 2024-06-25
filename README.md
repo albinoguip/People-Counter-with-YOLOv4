@@ -18,14 +18,14 @@ Este projeto implementa um serviço de inferência utilizando FastAPI para detec
 
 1. Clone este repositório:
     ```sh
-    git clone https://github.com/seu_usuario/seu_repositorio.git
+    git clone https://github.com/albinoguip/People-Counter-with-YOLOv4.git
     cd seu_repositorio
     ```
 
-2. Coloque os vídeos `video1.mp4` e `video2.mp4` na pasta `client`:
+2. Coloque os vídeos `01.mp4` e `02.mp4` na pasta `client1` e `client2`:
     ```sh
-    cp caminho/para/video1.mp4 client/video1.mp4
-    cp caminho/para/video2.mp4 client/video2.mp4
+    cp caminho/para/01.mp4 client1/01.mp4
+    cp caminho/para/02.mp4 client2/02.mp4
     ```
 
 3. Coloque os arquivos `yolov4.cfg` e `yolov4.weights` na pasta `server`:
