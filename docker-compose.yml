@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  server:
+    build:
+      context: ./server
+    ports:
+      - "8000:8000"
+
+  client1:
+    build:
+      context: ./client1
+    environment:
+      - VIDEO_PATH=/usr/src/app/01.mp4
+      - SERVER_URL=http://server:8000/detect/
+      - CLIENT_ID=client1
+    depends_on:
+      - server
+    restart: on-failure
+
+
+  client2:
+    build:
+      context: ./client2
+    environment:
+      - VIDEO_PATH=/usr/src/app/02.mp4
+      - SERVER_URL=http://server:8000/detect/
+      - CLIENT_ID=client2
+    depends_on:
+      - server
+    restart: on-failure
